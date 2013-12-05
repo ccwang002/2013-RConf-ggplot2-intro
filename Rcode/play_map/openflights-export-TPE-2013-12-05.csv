@@ -1,0 +1,254 @@
+﻿Date,From,To,Flight_Number,Airline,Distance,Duration,Seat,Seat_Type,Class,Reason,Plane,Registration,Trip,Note,From_OID,To_OID,Airline_OID,Plane_OID
+- -,TPE,AKJ,EVA Air (BR),EVA Air,1753,04:00,,,,,332$gc,,,"Direct",2276,2299,2091
+- -,TPE,AKJ,TransAsia Airways (GE),TransAsia Airways,1753,04:00,,,,,330$gc,,,"Direct",2276,2299,5038
+- -,TPE,AKJ,All Nippon Airways (NH),All Nippon Airways,1753,04:00,,,,,332$gc,,,"Codeshare",2276,2299,324
+- -,TPE,AMS,KLM Royal Dutch Airlines (KL),KLM Royal Dutch Airlines,5863,12:13,,,,,777$gc,,,"Direct",2276,580,3090
+- -,TPE,BKI,AirAsia (AK),AirAsia,1365,03:13,,,,,320$gc,,,"Direct",2276,3269,576
+- -,TPE,BKI,Malaysia Airlines (MH),Malaysia Airlines,1365,03:13,,,,,738$gc,,,"Direct",2276,3269,3378
+- -,TPE,BKK,EVA Air (BR),EVA Air,1545,03:35,,,,,77W 332$gc,,,"Direct",2276,3885,2091
+- -,TPE,BKK,China Airlines (CI),China Airlines,1545,03:35,,,,,744 343 738 333$gc,,,"Direct",2276,3885,1756
+- -,TPE,BKK,TransAsia Airways (GE),TransAsia Airways,1545,03:35,,,,,330$gc,,,"Direct",2276,3885,5038
+- -,TPE,BKK,KLM Royal Dutch Airlines (KL),KLM Royal Dutch Airlines,1545,03:35,,,,,340$gc,,,"Codeshare",2276,3885,3090
+- -,TPE,BKK,Thai Airways International (TG),Thai Airways International,1545,03:35,,,,,330$gc,,,"Direct",2276,3885,4940
+- -,TPE,BKK,Transaero Airlines (UN),Transaero Airlines,1545,03:35,,,,,333$gc,,,"Direct",2276,3885,5067
+- -,TPE,BNE,EVA Air (BR),EVA Air,4198,08:53,,,,,332$gc,,,"Direct",2276,3320,2091
+- -,TPE,BNE,China Airlines (CI),China Airlines,4198,08:53,,,,,333$gc,,,"Direct",2276,3320,1756
+- -,TPE,CAN,EVA Air (BR),EVA Air,512,01:31,,,,,332 744$gc,,,"Direct",2276,3370,2091
+- -,TPE,CAN,China Airlines (CI),China Airlines,512,01:31,,,,,744$gc,,,"Direct",2276,3370,1756
+- -,TPE,CAN,China Southern Airlines (CZ),China Southern Airlines,512,01:31,,,,,330$gc,,,"Direct",2276,3370,1767
+- -,TPE,CAN,Hainan Airlines (HU),Hainan Airlines,512,01:31,,,,,738$gc,,,"Direct",2276,3370,2660
+- -,TPE,CDG,EVA Air (BR),EVA Air,6077,12:39,,,,,77W$gc,,,"Direct",2276,1382,2091
+- -,TPE,CGK,EVA Air (BR),EVA Air,2366,05:13,,,,,77W 332$gc,,,"Direct",2276,3275,2091
+- -,TPE,CGK,China Airlines (CI),China Airlines,2366,05:13,,,,,343 333$gc,,,"Direct",2276,3275,1756
+- -,TPE,CGK,Garuda Indonesia (GA),Garuda Indonesia,2366,05:13,,,,,738$gc,,,"Direct",2276,3275,2520
+- -,TPE,CGO,Mandarin Airlines (AE),Mandarin Airlines,787,02:04,,,,,738 333$gc,,,"Codeshare",2276,3375,3392
+- -,TPE,CGO,EVA Air (BR),EVA Air,787,02:04,,,,,332$gc,,,"Direct",2276,3375,2091
+- -,TPE,CGO,China Southern Airlines (CZ),China Southern Airlines,787,02:04,,,,,738$gc,,,"Direct",2276,3375,1767
+- -,TPE,CGQ,China Southern Airlines (CZ),China Southern Airlines,1293,03:05,,,,,319$gc,,,"Direct",2276,4380,1767
+- -,TPE,CJU,TransAsia Airways (GE),TransAsia Airways,662,01:49,,,,,321$gc,,,"Direct",2276,2370,5038
+- -,TPE,CKG,Uni Air (B7),Uni Air,949,02:23,,,,,M90$gc,,,"Direct",2276,3393,9082
+- -,TPE,CKG,Air China (CA),Air China,949,02:23,,,,,M90 738$gc,,,"Direct",2276,3393,751
+- -,TPE,CNX,TransAsia Airways (GE),TransAsia Airways,1489,03:28,,,,,321$gc,,,"Direct",2276,3931,5038
+- -,TPE,CRK,LSM Airlines (PQ),LSM Airlines,684,01:52,,,,,320$gc,,,"Direct",2276,4140,14061
+- -,TPE,CSX,Mandarin Airlines (AE),Mandarin Airlines,539,01:34,,,,,320 333$gc,,,"Codeshare",2276,3371,3392
+- -,TPE,CSX,China Southern Airlines (CZ),China Southern Airlines,539,01:34,,,,,320$gc,,,"Direct",2276,3371,1767
+- -,TPE,CSX,TransAsia Airways (GE),TransAsia Airways,539,01:34,,,,,321$gc,,,"Direct",2276,3371,5038
+- -,TPE,CSX,Xiamen Airlines (MF),Xiamen Airlines,539,01:34,,,,,738$gc,,,"Direct",2276,3371,5484
+- -,TPE,CTS,EVA Air (BR),EVA Air,1684,03:52,,,,,332$gc,,,"Direct",2276,2287,2091
+- -,TPE,CTS,China Airlines (CI),China Airlines,1684,03:52,,,,,744$gc,,,"Direct",2276,2287,1756
+- -,TPE,CTS,TransAsia Airways (GE),TransAsia Airways,1684,03:52,,,,,330$gc,,,"Direct",2276,2287,5038
+- -,TPE,CTS,All Nippon Airways (NH),All Nippon Airways,1684,03:52,,,,,332$gc,,,"Codeshare",2276,2287,324
+- -,TPE,CTU,EVA Air (BR),EVA Air,1120,02:44,,,,,332$gc,,,"Direct",2276,3395,2091
+- -,TPE,CTU,Air China (CA),Air China,1120,02:44,,,,,332 319 321$gc,,,"Direct",2276,3395,751
+- -,TPE,CTU,China Airlines (CI),China Airlines,1120,02:44,,,,,333$gc,,,"Direct",2276,3395,1756
+- -,TPE,DEL,Alitalia (AZ),Alitalia,2715,05:55,,,,,333$gc,,,"Codeshare",2276,3093,596
+- -,TPE,DEL,China Airlines (CI),China Airlines,2715,05:55,,,,,333$gc,,,"Direct",2276,3093,1756
+- -,TPE,DLC,Uni Air (B7),Uni Air,959,02:25,,,,,332 738$gc,,,"Codeshare",2276,3404,9082
+- -,TPE,DLC,China Airlines (CI),China Airlines,959,02:25,,,,,333$gc,,,"Direct",2276,3404,1756
+- -,TPE,DLC,China Southern Airlines (CZ),China Southern Airlines,959,02:25,,,,,321$gc,,,"Direct",2276,3404,1767
+- -,TPE,DLC,Hainan Airlines (HU),Hainan Airlines,959,02:25,,,,,738$gc,,,"Direct",2276,3404,2660
+- -,TPE,DPS,EVA Air (BR),EVA Air,2371,05:14,,,,,332$gc,,,"Direct",2276,3940,2091
+- -,TPE,DPS,China Airlines (CI),China Airlines,2371,05:14,,,,,333$gc,,,"Direct",2276,3940,1756
+- -,TPE,DPS,Garuda Indonesia (GA),Garuda Indonesia,2371,05:14,,,,,333$gc,,,"Codeshare",2276,3940,2520
+- -,TPE,DYG,TransAsia Airways (GE),TransAsia Airways,718,01:56,,,,,321$gc,,,"Direct",2276,6353,5038
+- -,TPE,FOC,Uni Air (B7),Uni Air,114,00:43,,,,,M90$gc,,,"Direct",2276,3385,9082
+- -,TPE,FOC,Xiamen Airlines (MF),Xiamen Airlines,114,00:43,,,,,738$gc,,,"Direct",2276,3385,5484
+- -,TPE,FRA,China Airlines (CI),China Airlines,5817,12:08,,,,,744$gc,,,"Direct",2276,340,1756
+- -,TPE,FSZ,China Airlines (CI),China Airlines,1213,02:55,,,,,738$gc,,,"Direct",2276,6476,1756
+- -,TPE,FUK,EVA Air (BR),EVA Air,807,02:06,,,,,333$gc,,,"Direct",2276,2305,2091
+- -,TPE,FUK,China Airlines (CI),China Airlines,807,02:06,,,,,343 744 333 738$gc,,,"Direct",2276,2305,1756
+- -,TPE,FUK,Cathay Pacific (CX),Cathay Pacific,807,02:06,,,,,773 772$gc,,,"Direct",2276,2305,1680
+- -,TPE,FUK,Japan Airlines (JL),Japan Airlines,807,02:06,,,,,773$gc,,,"Codeshare",2276,2305,2987
+- -,TPE,FUK,All Nippon Airways (NH),All Nippon Airways,807,02:06,,,,,333$gc,,,"Codeshare",2276,2305,324
+- -,TPE,GUM,EVA Air (BR),EVA Air,1727,03:57,,,,,332$gc,,,"Direct",2276,2246,2091
+- -,TPE,GUM,China Airlines (CI),China Airlines,1727,03:57,,,,,333$gc,,,"Direct",2276,2246,1756
+- -,TPE,HAK,China Airlines (CI),China Airlines,773,02:02,,,,,E90$gc,,,"Direct",2276,4120,1756
+- -,TPE,HAK,Hainan Airlines (HU),Hainan Airlines,773,02:02,,,,,738$gc,,,"Direct",2276,4120,2660
+- -,TPE,HAN,EVA Air (BR),EVA Air,1014,02:31,,,,,M90$gc,,,"Codeshare",2276,3199,2091
+- -,TPE,HAN,China Airlines (CI),China Airlines,1014,02:31,,,,,333 343$gc,,,"Direct",2276,3199,1756
+- -,TPE,HAN,Vietnam Airlines (VN),Vietnam Airlines,1014,02:31,,,,,321$gc,,,"Direct",2276,3199,5309
+- -,TPE,HET,EVA Air (BR),EVA Air,1216,02:55,,,,,321$gc,,,"Direct",2276,6345,2091
+- -,TPE,HET,Air China (CA),Air China,1216,02:55,,,,,321$gc,,,"Direct",2276,6345,751
+- -,TPE,HFE,Primaris Airlines (FE),Primaris Airlines,520,01:32,,,,,M83$gc,,,"Direct",2276,3389,4044
+- -,TPE,HFE,China Eastern Airlines (MU),China Eastern Airlines,520,01:32,,,,,320$gc,,,"Direct",2276,3389,1758
+- -,TPE,HGH,EVA Air (BR),EVA Air,359,01:13,,,,,332 744$gc,,,"Direct",2276,3386,2091
+- -,TPE,HGH,Air China (CA),Air China,359,01:13,,,,,321 332 744$gc,,,"Direct",2276,3386,751
+- -,TPE,HGH,Xiamen Airlines (MF),Xiamen Airlines,359,01:13,,,,,738$gc,,,"Direct",2276,3386,5484
+- -,TPE,HIJ,China Airlines (CI),China Airlines,951,02:24,,,,,738$gc,,,"Direct",2276,2326,1756
+- -,TPE,HKD,EVA Air (BR),EVA Air,1605,03:42,,,,,332$gc,,,"Direct",2276,2288,2091
+- -,TPE,HKD,TransAsia Airways (GE),TransAsia Airways,1605,03:42,,,,,330$gc,,,"Direct",2276,2288,5038
+- -,TPE,HKD,All Nippon Airways (NH),All Nippon Airways,1605,03:42,,,,,332$gc,,,"Codeshare",2276,2288,324
+- -,TPE,HKG,EVA Air (BR),EVA Air,500,01:30,,,,,77W 321 332 333 74E M90 744$gc,,,"Direct",2276,3077,2091
+- -,TPE,HKG,China Airlines (CI),China Airlines,500,01:30,,,,,333 744 343 738$gc,,,"Direct",2276,3077,1756
+- -,TPE,HKG,Cathay Pacific (CX),Cathay Pacific,500,01:30,,,,,773 772 333 343 744 77W$gc,,,"Direct",2276,3077,1680
+- -,TPE,HKG,Hong Kong Airlines (HX),Hong Kong Airlines,500,01:30,,,,,332 333$gc,,,"Direct",2276,3077,2773
+- -,TPE,HKG,Japan Airlines (JL),Japan Airlines,500,01:30,,,,,773$gc,,,"Codeshare",2276,3077,2987
+- -,TPE,HKG,Dragonair (KA),Dragonair,500,01:30,,,,,333 320$gc,,,"Direct",2276,3077,2056
+- -,TPE,HNL,China Airlines (CI),China Airlines,5057,10:36,,,,,333$gc,,,"Direct",2276,3728,1756
+- -,TPE,HNL,Hawaiian Airlines (HA),Hawaiian Airlines,5057,10:36,,,,,332$gc,,,"Direct",2276,3728,2688
+- -,TPE,HRB,EVA Air (BR),EVA Air,1445,03:23,,,,,M90$gc,,,"Direct",2276,3400,2091
+- -,TPE,HRB,China Southern Airlines (CZ),China Southern Airlines,1445,03:23,,,,,320 321$gc,,,"Direct",2276,3400,1767
+- -,TPE,ICN,EVA Air (BR),EVA Air,908,02:18,,,,,332 333$gc,,,"Direct",2276,3930,2091
+- -,TPE,ICN,China Airlines (CI),China Airlines,908,02:18,,,,,333 738$gc,,,"Direct",2276,3930,1756
+- -,TPE,ICN,Cathay Pacific (CX),Cathay Pacific,908,02:18,,,,,772 773$gc,,,"Direct",2276,3930,1680
+- -,TPE,ICN,Korean Air (KE),Korean Air,908,02:18,,,,,333 73H 772 73J$gc,,,"Direct",2276,3930,3163
+- -,TPE,ICN,Asiana Airlines (OZ),Asiana Airlines,908,02:18,,,,,333 772 321 77L$gc,,,"Direct",2276,3930,28
+- -,TPE,ICN,Thai Airways International (TG),Thai Airways International,908,02:18,,,,,330$gc,,,"Direct",2276,3930,4940
+- -,TPE,ICN,Scoot (TZ),Scoot,908,02:18,,,,,772$gc,,,"Direct",2276,3930,17891
+- -,TPE,INC,Primaris Airlines (FE),Primaris Airlines,1283,03:03,,,,,M83$gc,,,"Direct",2276,4085,4044
+- -,TPE,INC,China Eastern Airlines (MU),China Eastern Airlines,1283,03:03,,,,,320$gc,,,"Direct",2276,4085,1758
+- -,TPE,JFK,EVA Air (BR),EVA Air,7790,16:04,,,,,77W$gc,,,"Direct",2276,3797,2091
+- -,TPE,KHN,China Airlines (CI),China Airlines,419,01:20,,,,,738 333$gc,,,"Direct",2276,3384,1756
+- -,TPE,KHN,China Eastern Airlines (MU),China Eastern Airlines,419,01:20,,,,,320$gc,,,"Direct",2276,3384,1758
+- -,TPE,KIX,Jetstar Asia Airways (3K),Jetstar Asia Airways,1057,02:36,,,,,320$gc,,,"Direct",2276,3992,3021
+- -,TPE,KIX,EVA Air (BR),EVA Air,1057,02:36,,,,,332 321 77W 744$gc,,,"Direct",2276,3992,2091
+- -,TPE,KIX,China Airlines (CI),China Airlines,1057,02:36,,,,,744 333 343$gc,,,"Direct",2276,3992,1756
+- -,TPE,KIX,Cathay Pacific (CX),Cathay Pacific,1057,02:36,,,,,773 744$gc,,,"Direct",2276,3992,1680
+- -,TPE,KIX,TransAsia Airways (GE),TransAsia Airways,1057,02:36,,,,,330$gc,,,"Direct",2276,3992,5038
+- -,TPE,KIX,Japan Airlines (JL),Japan Airlines,1057,02:36,,,,,73H 767$gc,,,"Direct",2276,3992,2987
+- -,TPE,KIX,Peach Aviation (MM),Peach Aviation,1057,02:36,,,,,320$gc,,,"Direct",2276,3992,17675
+- -,TPE,KIX,All Nippon Airways (NH),All Nippon Airways,1057,02:36,,,,,332 321$gc,,,"Direct",2276,3992,324
+- -,TPE,KLO,Philippine Airlines (PR),Philippine Airlines,928,02:21,,,,,320$gc,,,"Direct",2276,2430,3952
+- -,TPE,KMG,Sichuan Airlines (3U),Sichuan Airlines,1155,02:48,,,,,320$gc,,,"Direct",2276,3382,4608
+- -,TPE,KMG,China Eastern Airlines (MU),China Eastern Airlines,1155,02:48,,,,,737$gc,,,"Direct",2276,3382,1758
+- -,TPE,KMI,China Airlines (CI),China Airlines,777,02:03,,,,,738$gc,,,"Direct",2276,2308,1756
+- -,TPE,KMQ,EVA Air (BR),EVA Air,1189,02:52,,,,,M90$gc,,,"Direct",2276,2322,2091
+- -,TPE,KMQ,All Nippon Airways (NH),All Nippon Airways,1189,02:52,,,,,M90$gc,,,"Codeshare",2276,2322,324
+- -,TPE,KOJ,China Airlines (CI),China Airlines,739,01:58,,,,,738$gc,,,"Direct",2276,2307,1756
+- -,TPE,KUH,TransAsia Airways (GE),TransAsia Airways,1795,04:05,,,,,330$gc,,,"Direct",2276,5994,5038
+- -,TPE,KUL,EVA Air (BR),EVA Air,2015,04:31,,,,,332 77W$gc,,,"Direct",2276,3304,2091
+- -,TPE,KUL,China Airlines (CI),China Airlines,2015,04:31,,,,,333 738 744$gc,,,"Direct",2276,3304,1756
+- -,TPE,KUL,AirAsia X (D7),AirAsia X,2015,04:31,,,,,330$gc,,,"Direct",2276,3304,2417
+- -,TPE,KUL,Malaysia Airlines (MH),Malaysia Airlines,2015,04:31,,,,,738$gc,,,"Direct",2276,3304,3378
+- -,TPE,KWE,China Southern Airlines (CZ),China Southern Airlines,902,02:18,,,,,738$gc,,,"Direct",2276,3394,1767
+- -,TPE,KWE,Primaris Airlines (FE),Primaris Airlines,902,02:18,,,,,M83$gc,,,"Direct",2276,3394,4044
+- -,TPE,KWL,EVA Air (BR),EVA Air,699,01:53,,,,,M90$gc,,,"Direct",2276,3372,2091
+- -,TPE,KWL,China Southern Airlines (CZ),China Southern Airlines,699,01:53,,,,,738$gc,,,"Direct",2276,3372,1767
+- -,TPE,LAX,EVA Air (BR),EVA Air,6783,14:03,,,,,77W$gc,,,"Direct",2276,3484,2091
+- -,TPE,LAX,China Airlines (CI),China Airlines,6783,14:03,,,,,744$gc,,,"Direct",2276,3484,1756
+- -,TPE,LAX,Delta Air Lines (DL),Delta Air Lines,6783,14:03,,,,,744$gc,,,"Codeshare",2276,3484,2009
+- -,TPE,LAX,US Airways (US),US Airways,6783,14:03,,,,,77W$gc,,,"Direct",2276,3484,5265
+- -,TPE,LHW,Primaris Airlines (FE),Primaris Airlines,1291,03:04,,,,,M83$gc,,,"Direct",2276,6431,4044
+- -,TPE,LHW,Hainan Airlines (HU),Hainan Airlines,1291,03:04,,,,,738$gc,,,"Direct",2276,6431,2660
+- -,TPE,LJG,Mandarin Airlines (AE),Mandarin Airlines,1308,03:06,,,,,738$gc,,,"Direct",2276,4033,3392
+- -,TPE,LJG,China Eastern Airlines (MU),China Eastern Airlines,1308,03:06,,,,,737$gc,,,"Direct",2276,4033,1758
+- -,TPE,MFM,EVA Air (BR),EVA Air,523,01:32,,,,,M90 332 744 321$gc,,,"Direct",2276,3121,2091
+- -,TPE,MFM,TransAsia Airways (GE),TransAsia Airways,523,01:32,,,,,320$gc,,,"Direct",2276,3121,5038
+- -,TPE,MFM,Air Macau (NX),Air Macau,523,01:32,,,,,319 321 320$gc,,,"Direct",2276,3121,316
+- -,TPE,MNL,Cebu Pacific (5J),Cebu Pacific,729,01:57,,,,,320$gc,,,"Direct",2276,2397,1683
+- -,TPE,MNL,EVA Air (BR),EVA Air,729,01:57,,,,,74E$gc,,,"Direct",2276,2397,2091
+- -,TPE,MNL,China Airlines (CI),China Airlines,729,01:57,,,,,343 738 333$gc,,,"Direct",2276,2397,1756
+- -,TPE,MNL,KLM Royal Dutch Airlines (KL),KLM Royal Dutch Airlines,729,01:57,,,,,777$gc,,,"Direct",2276,2397,3090
+- -,TPE,MNL,Philippine Airlines (PR),Philippine Airlines,729,01:57,,,,,320$gc,,,"Direct",2276,2397,3952
+- -,TPE,NGB,Mandarin Airlines (AE),Mandarin Airlines,328,01:09,,,,,320 738 333 343$gc,,,"Codeshare",2276,3387,3392
+- -,TPE,NGB,Uni Air (B7),Uni Air,328,01:09,,,,,332$gc,,,"Codeshare",2276,3387,9082
+- -,TPE,NGB,China Eastern Airlines (MU),China Eastern Airlines,328,01:09,,,,,320$gc,,,"Direct",2276,3387,1758
+- -,TPE,NGO,China Airlines (CI),China Airlines,1148,02:47,,,,,333 738$gc,,,"Direct",2276,3942,1756
+- -,TPE,NGO,Cathay Pacific (CX),Cathay Pacific,1148,02:47,,,,,773$gc,,,"Direct",2276,3942,1680
+- -,TPE,NGO,Japan Airlines (JL),Japan Airlines,1148,02:47,,,,,73H$gc,,,"Direct",2276,3942,2987
+- -,TPE,NKG,Mandarin Airlines (AE),Mandarin Airlines,482,01:27,,,,,320 321 744$gc,,,"Codeshare",2276,3388,3392
+- -,TPE,NKG,Uni Air (B7),Uni Air,482,01:27,,,,,332 74E$gc,,,"Codeshare",2276,3388,9082
+- -,TPE,NKG,China Eastern Airlines (MU),China Eastern Airlines,482,01:27,,,,,320 321$gc,,,"Direct",2276,3388,1758
+- -,TPE,NNG,China Southern Airlines (CZ),China Southern Airlines,841,02:10,,,,,738$gc,,,"Direct",2276,3373,1767
+- -,TPE,NNG,Shenzhen Airlines (ZH),Shenzhen Airlines,841,02:10,,,,,738$gc,,,"Direct",2276,3373,4611
+- -,TPE,NRT,American Airlines (AA),American Airlines,1354,03:12,,,,,737$gc,,,"Direct",2276,2279,24
+- -,TPE,NRT,EVA Air (BR),EVA Air,1354,03:12,,,,,77W 321 332$gc,,,"Direct",2276,2279,2091
+- -,TPE,NRT,China Airlines (CI),China Airlines,1354,03:12,,,,,333 744 343$gc,,,"Direct",2276,2279,1756
+- -,TPE,NRT,Cathay Pacific (CX),Cathay Pacific,1354,03:12,,,,,773$gc,,,"Direct",2276,2279,1680
+- -,TPE,NRT,Delta Air Lines (DL),Delta Air Lines,1354,03:12,,,,,744$gc,,,"Direct",2276,2279,2009
+- -,TPE,NRT,TransAsia Airways (GE),TransAsia Airways,1354,03:12,,,,,320$gc,,,"Direct",2276,2279,5038
+- -,TPE,NRT,Japan Airlines (JL),Japan Airlines,1354,03:12,,,,,73H$gc,,,"Direct",2276,2279,2987
+- -,TPE,NRT,All Nippon Airways (NH),All Nippon Airways,1354,03:12,,,,,763$gc,,,"Direct",2276,2279,324
+- -,TPE,NRT,Scoot (TZ),Scoot,1354,03:12,,,,,772$gc,,,"Direct",2276,2279,17891
+- -,TPE,OKA,China Airlines (CI),China Airlines,406,01:18,,,,,738 333 343$gc,,,"Direct",2276,2384,1756
+- -,TPE,OKA,TransAsia Airways (GE),TransAsia Airways,406,01:18,,,,,321 320$gc,,,"Direct",2276,2384,5038
+- -,TPE,OKA,Peach Aviation (MM),Peach Aviation,406,01:18,,,,,320$gc,,,"Direct",2276,2384,17675
+- -,TPE,OKJ,EVA Air (BR),EVA Air,1007,02:30,,,,,M90$gc,,,"Codeshare",2276,2327,2091
+- -,TPE,OKJ,All Nippon Airways (NH),All Nippon Airways,1007,02:30,,,,,M90$gc,,,"Codeshare",2276,2327,324
+- -,TPE,PEK,EVA Air (BR),EVA Air,1070,02:38,,,,,77W 744$gc,,,"Direct",2276,3364,2091
+- -,TPE,PEK,Air China (CA),Air China,1070,02:38,,,,,333 77W 744 738$gc,,,"Direct",2276,3364,751
+- -,TPE,PEK,China Airlines (CI),China Airlines,1070,02:38,,,,,744$gc,,,"Direct",2276,3364,1756
+- -,TPE,PEK,Hainan Airlines (HU),Hainan Airlines,1070,02:38,,,,,738$gc,,,"Direct",2276,3364,2660
+- -,TPE,PEN,China Airlines (CI),China Airlines,1947,04:23,,,,,738$gc,,,"Direct",2276,3308,1756
+- -,TPE,PNH,EVA Air (BR),EVA Air,1421,03:20,,,,,321 M90$gc,,,"Direct",2276,3034,2091
+- -,TPE,PNH,China Airlines (CI),China Airlines,1421,03:20,,,,,738$gc,,,"Direct",2276,3034,1756
+- -,TPE,PUS,Air Busan (BX),Air Busan,834,02:10,,,,,321$gc,,,"Direct",2276,2372,5982
+- -,TPE,PUS,China Airlines (CI),China Airlines,834,02:10,,,,,738$gc,,,"Direct",2276,2372,1756
+- -,TPE,PVG,EVA Air (BR),EVA Air,420,01:20,,,,,744$gc,,,"Direct",2276,3406,2091
+- -,TPE,PVG,Air China (CA),Air China,420,01:20,,,,,744 340$gc,,,"Direct",2276,3406,751
+- -,TPE,PVG,China Airlines (CI),China Airlines,420,01:20,,,,,744$gc,,,"Direct",2276,3406,1756
+- -,TPE,PVG,China Southern Airlines (CZ),China Southern Airlines,420,01:20,,,,,321$gc,,,"Direct",2276,3406,1767
+- -,TPE,PVG,TransAsia Airways (GE),TransAsia Airways,420,01:20,,,,,321$gc,,,"Direct",2276,3406,5038
+- -,TPE,PVG,China Eastern Airlines (MU),China Eastern Airlines,420,01:20,,,,,332$gc,,,"Direct",2276,3406,1758
+- -,TPE,REP,TransAsia Airways (GE),TransAsia Airways,1389,03:16,,,,,321$gc,,,"Direct",2276,3035,5038
+- -,TPE,RGN,China Airlines (CI),China Airlines,1710,03:55,,,,,738$gc,,,"Direct",2276,3239,1756
+- -,TPE,ROR,China Airlines (CI),China Airlines,1505,03:30,,,,,738$gc,,,"Direct",2276,2256,1756
+- -,TPE,ROR,TransAsia Airways (GE),TransAsia Airways,1505,03:30,,,,,320$gc,,,"Direct",2276,2256,5038
+- -,TPE,SDJ,EVA Air (BR),EVA Air,1462,03:25,,,,,332$gc,,,"Direct",2276,2347,2091
+- -,TPE,SDJ,All Nippon Airways (NH),All Nippon Airways,1462,03:25,,,,,332$gc,,,"Codeshare",2276,2347,324
+- -,TPE,SEA,EVA Air (BR),EVA Air,6059,12:37,,,,,744$gc,,,"Direct",2276,3577,2091
+- -,TPE,SEA,US Airways (US),US Airways,6059,12:37,,,,,744$gc,,,"Direct",2276,3577,5265
+- -,TPE,SFO,EVA Air (BR),EVA Air,6453,13:24,,,,,77W$gc,,,"Direct",2276,3469,2091
+- -,TPE,SFO,China Airlines (CI),China Airlines,6453,13:24,,,,,744$gc,,,"Direct",2276,3469,1756
+- -,TPE,SFO,Delta Air Lines (DL),Delta Air Lines,6453,13:24,,,,,744$gc,,,"Codeshare",2276,3469,2009
+- -,TPE,SFO,US Airways (US),US Airways,6453,13:24,,,,,77W$gc,,,"Direct",2276,3469,5265
+- -,TPE,SGN,EVA Air (BR),EVA Air,1371,03:14,,,,,77W 332$gc,,,"Direct",2276,3205,2091
+- -,TPE,SGN,China Airlines (CI),China Airlines,1371,03:14,,,,,333 343 738$gc,,,"Direct",2276,3205,1756
+- -,TPE,SGN,Vietnam Airlines (VN),Vietnam Airlines,1371,03:14,,,,,332$gc,,,"Direct",2276,3205,5309
+- -,TPE,SHE,Mandarin Airlines (AE),Mandarin Airlines,1132,02:45,,,,,321 333$gc,,,"Codeshare",2276,4144,3392
+- -,TPE,SHE,Uni Air (B7),Uni Air,1132,02:45,,,,,321 320 M90$gc,,,"Codeshare",2276,4144,9082
+- -,TPE,SHE,China Southern Airlines (CZ),China Southern Airlines,1132,02:45,,,,,321$gc,,,"Direct",2276,4144,1767
+- -,TPE,SHE,Shenzhen Airlines (ZH),Shenzhen Airlines,1132,02:45,,,,,320$gc,,,"Direct",2276,4144,4611
+- -,TPE,SIN,Jetstar Asia Airways (3K),Jetstar Asia Airways,2001,04:30,,,,,320$gc,,,"Direct",2276,3316,3021
+- -,TPE,SIN,EVA Air (BR),EVA Air,2001,04:30,,,,,77W$gc,,,"Direct",2276,3316,2091
+- -,TPE,SIN,China Airlines (CI),China Airlines,2001,04:30,,,,,738 333$gc,,,"Direct",2276,3316,1756
+- -,TPE,SIN,Garuda Indonesia (GA),Garuda Indonesia,2001,04:30,,,,,333$gc,,,"Codeshare",2276,3316,2520
+- -,TPE,SIN,Singapore Airlines (SQ),Singapore Airlines,2001,04:30,,,,,333$gc,,,"Direct",2276,3316,4435
+- -,TPE,SIN,Tiger Airways (TR),Tiger Airways,2001,04:30,,,,,320$gc,,,"Direct",2276,3316,4936
+- -,TPE,SIN,Scoot (TZ),Scoot,2001,04:30,,,,,772$gc,,,"Direct",2276,3316,17891
+- -,TPE,SJW,Primaris Airlines (FE),Primaris Airlines,988,02:28,,,,,M83$gc,,,"Direct",2276,6347,4044
+- -,TPE,SJW,China Eastern Airlines (MU),China Eastern Airlines,988,02:28,,,,,737$gc,,,"Direct",2276,6347,1758
+- -,TPE,SUB,EVA Air (BR),EVA Air,2312,05:07,,,,,332$gc,,,"Direct",2276,3928,2091
+- -,TPE,SYD,China Airlines (CI),China Airlines,4524,09:32,,,,,333$gc,,,"Direct",2276,3361,1756
+- -,TPE,SYX,China Airlines (CI),China Airlines,890,02:16,,,,,E90$gc,,,"Direct",2276,4030,1756
+- -,TPE,SZX,Uni Air (B7),Uni Air,497,01:29,,,,,74E 738$gc,,,"Codeshare",2276,3374,9082
+- -,TPE,SZX,China Airlines (CI),China Airlines,497,01:29,,,,,744$gc,,,"Direct",2276,3374,1756
+- -,TPE,SZX,China Southern Airlines (CZ),China Southern Airlines,497,01:29,,,,,321$gc,,,"Direct",2276,3374,1767
+- -,TPE,SZX,Shenzhen Airlines (ZH),Shenzhen Airlines,497,01:29,,,,,738$gc,,,"Direct",2276,3374,4611
+- -,TPE,TAK,China Airlines (CI),China Airlines,991,02:28,,,,,738$gc,,,"Direct",2276,2337,1756
+- -,TPE,TAO,Uni Air (B7),Uni Air,774,02:02,,,,,74E 738$gc,,,"Codeshare",2276,3390,9082
+- -,TPE,TAO,China Airlines (CI),China Airlines,774,02:02,,,,,333$gc,,,"Direct",2276,3390,1756
+- -,TPE,TAO,China Eastern Airlines (MU),China Eastern Airlines,774,02:02,,,,,320$gc,,,"Direct",2276,3390,1758
+- -,TPE,TAO,Shandong Airlines (SC),Shandong Airlines,774,02:02,,,,,738$gc,,,"Direct",2276,3390,4599
+- -,TPE,TNA,EVA Air (BR),EVA Air,847,02:11,,,,,M90$gc,,,"Direct",2276,4108,2091
+- -,TPE,TNA,Shandong Airlines (SC),Shandong Airlines,847,02:11,,,,,738$gc,,,"Direct",2276,4108,4599
+- -,TPE,TOY,China Airlines (CI),China Airlines,1234,02:58,,,,,738$gc,,,"Direct",2276,2324,1756
+- -,TPE,TSN,EVA Air (BR),EVA Air,995,02:29,,,,,74E$gc,,,"Direct",2276,3368,2091
+- -,TPE,TXN,EVA Air (BR),EVA Air,369,01:14,,,,,321$gc,,,"Direct",2276,6387,2091
+- -,TPE,TYN,China Eastern Airlines (MU),China Eastern Airlines,1010,02:31,,,,,738$gc,,,"Direct",2276,3369,1758
+- -,TPE,URC,China Airlines (CI),China Airlines,2294,05:05,,,,,333$gc,,,"Direct",2276,3399,1756
+- -,TPE,URC,China Southern Airlines (CZ),China Southern Airlines,2294,05:05,,,,,752 333$gc,,,"Direct",2276,3399,1767
+- -,TPE,VIE,China Airlines (CI),China Airlines,5569,11:38,,,,,343$gc,,,"Direct",2276,1613,1756
+- -,TPE,WNZ,Air China (CA),Air China,197,00:53,,,,,319$gc,,,"Direct",2276,6392,751
+- -,TPE,WUH,China Airlines (CI),China Airlines,581,01:39,,,,,333$gc,,,"Direct",2276,3376,1756
+- -,TPE,WUH,China Southern Airlines (CZ),China Southern Airlines,581,01:39,,,,,738$gc,,,"Direct",2276,3376,1767
+- -,TPE,WUH,China Eastern Airlines (MU),China Eastern Airlines,581,01:39,,,,,738$gc,,,"Direct",2276,3376,1758
+- -,TPE,WUX,China Airlines (CI),China Airlines,445,01:23,,,,,320$gc,,,"Codeshare",2276,6390,1756
+- -,TPE,WUX,TransAsia Airways (GE),TransAsia Airways,445,01:23,,,,,737$gc,,,"Codeshare",2276,6390,5038
+- -,TPE,WUX,China Eastern Airlines (MU),China Eastern Airlines,445,01:23,,,,,320$gc,,,"Direct",2276,6390,1758
+- -,TPE,WUX,Shenzhen Airlines (ZH),Shenzhen Airlines,445,01:23,,,,,738$gc,,,"Direct",2276,6390,4611
+- -,TPE,XIY,Uni Air (B7),Uni Air,987,02:28,,,,,321 738$gc,,,"Codeshare",2276,3379,9082
+- -,TPE,XIY,China Airlines (CI),China Airlines,987,02:28,,,,,333$gc,,,"Direct",2276,3379,1756
+- -,TPE,XIY,Hainan Airlines (HU),Hainan Airlines,987,02:28,,,,,738$gc,,,"Direct",2276,3379,2660
+- -,TPE,XIY,China Eastern Airlines (MU),China Eastern Airlines,987,02:28,,,,,320$gc,,,"Direct",2276,3379,1758
+- -,TPE,XMN,Mandarin Airlines (AE),Mandarin Airlines,198,00:53,,,,,343 738 333$gc,,,"Codeshare",2276,3383,3392
+- -,TPE,XMN,Xiamen Airlines (MF),Xiamen Airlines,198,00:53,,,,,738$gc,,,"Direct",2276,3383,5484
+- -,TPE,XUZ,TransAsia Airways (GE),TransAsia Airways,674,01:50,,,,,321$gc,,,"Direct",2276,4149,5038
+- -,TPE,XUZ,China Eastern Airlines (MU),China Eastern Airlines,674,01:50,,,,,320$gc,,,"Direct",2276,4149,1758
+- -,TPE,YNT,Shandong Airlines (SC),Shandong Airlines,851,02:12,,,,,738$gc,,,"Direct",2276,3392,4599
+- -,TPE,YNZ,Mandarin Airlines (AE),Mandarin Airlines,577,01:39,,,,,738$gc,,,"Codeshare",2276,6393,3392
+- -,TPE,YNZ,Uni Air (B7),Uni Air,577,01:39,,,,,321$gc,,,"Codeshare",2276,6393,9082
+- -,TPE,YNZ,China Eastern Airlines (MU),China Eastern Airlines,577,01:39,,,,,320$gc,,,"Direct",2276,6393,1758
+- -,TPE,YVR,EVA Air (BR),EVA Air,5956,12:24,,,,,744$gc,,,"Direct",2276,156,2091
+- -,TPE,YVR,China Airlines (CI),China Airlines,5956,12:24,,,,,343$gc,,,"Direct",2276,156,1756
+- -,TPE,YYZ,EVA Air (BR),EVA Air,7501,15:30,,,,,77W$gc,,,"Direct",2276,193,2091
