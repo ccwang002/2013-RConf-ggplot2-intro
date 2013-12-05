@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>R Visualization Using ggplot2, Liang Bo Wang</title>
+    <meta name="viewport" content="width=792, user-scalable=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Icon -->
+    <link href="pics/favicon.ico" rel="icon" type="image/x-icon" />
+
+    <!-- MathJax -->
+    <!-- CSS Stle -->
+    <link rel="stylesheet" href="lib/shower/themes/ribbon/styles/screen.css">
+    <link rel="stylesheet" href="lib/highlight/styles/tomorrow.css" type="text/css"/>
+    <style type="text/css" media="all">
+
+        /* clean table */
+        table.clean td img {
+            vertical-align: top;
+        }
+        table.clean td {
+            background: none;
+        }
+
+        h2.tighter {
+            margin: -40px 0 20px;
+        }
+
+        /* tighter paragraph */
+        p.tighter {
+            margin: 0 0 25px;
+        }
+
+        /* tighter code */
+        pre.tighter {
+            margin: 0 0 20px;
+        }
+
+        /* inline */
+        p.inline {
+            margin-bottom: 0px;
+        }
+
+        /* smaller code */
+        pre.small code {
+            font-size: 16px;
+            line-height: 2em;
+        }
+
+        /* source link */
+        div.ref-img p.src-link {
+            position: relative;
+            font-size: 14px;
+            text-align: right;
+            bottom: 10px;
+            right: 10px;
+        }
+
+        /* two column slides */
+        section.slide.twocol div.left {
+            width: 50%;
+            float: left;
+        }
+        section.slide.twocol div.right {
+            width: 50%;
+            float: right;
+        }
+
+        section.slide.twocol-ll div.left {
+            width: 65%;
+            float: left;
+        }
+        section.slide.twocol-ll div.right {
+            width: 35%;
+            float: right;
+        }
+
+        section.slide.twocol-lr div.left {
+            width: 35%;
+            float: left;
+        }
+        section.slide.twocol-lr div.right {
+            width: 65%;
+            float: right;
+        }
+    </style>
+
+</head>
+<body class="list">
+    <!-- Header in overview -->
+    <header class="caption">
+        <div style="overflow: auto; vertical-align: middle; position: relative;">
+            <img style="float: left; padding-right: 30px; width: 120px;" src="pics/twR_logo.png" alt="">
+            <div style="">
+                <h1>
+                    R Visualization - Using ggplot2
+                </h1>
+                <p style="line-height: 32px; padding-top:15px;">Liang Bo Wang (亮亮), 2013-12-06</p>
+                <p style="line-height: 32px;">From Taiwan R User Group, more info on <a href="http://www.meetup.com/Taiwan-R/" target="_blank">Meetup</a>.</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- START OF SLIDE CONTENT -->
+
+    <!-- Cover slide -->
+    <section id="cover" class="slide cover"><div>
+        <h3>
+            Taiwan R Conference, 2013-12-06
+        </h3>
+        <h2>R Visualization - Using ggplot2</h2>
+        <p><a href="http://about.me/lbwang" target="_blank">Liang Bo Wang</a> (亮亮)</br>
+        Under CC 4.0 BY International License</p>
+        <img src="pics/cover.jpg" alt="">
+        <p class='src-link'>
+            pic source:
+            <a href="http://seuconteudonaweb.wordpress.com/2013/08/06/a-big-analise-de-dados/"
+               target="_blank">
+                http://seuconteudonaweb.wordpress.com/2013/08/06/a-big-analise-de-dados/
+            </a>
+        </p>
+    </div>
+    <style>
+        #cover h2 {
+            margin: 40px 0 40px;
+            color: #FFF;
+            text-align: center;
+            font-size: 120px;
+        }
+        #cover h3 {
+            margin: -30px 0 0 0;
+            color: #FFF;
+            text-align: center;
+            font-size: 32px;
+        }
+        #cover p {
+            margin: 30px 0 0;
+            text-align: center;
+            color: #DDD;
+            font-size: 32px;
+        }
+        #cover p a {
+            color: #DDD;
+        }
+        #cover .src-link {
+            position: absolute;
+            font-size: 14px;
+            text-align: right;
+            bottom: 10px;
+            right: 10px;
+        }
+        #cover img {
+            opacity: 0.7;
+        }
+    </style>
+    </section>
+
+
+    <section id="theme" class="slide"><div>
+        <h2>今天的主題</h2>
+        <ul>
+            <li class="next">畫圖</li>
+            <li class="next">…還是畫圖</li>
+            <li class="next">早上來上課會蠻想睡的……</li>
+            <li class="next">不知道大家常不常做圖表？</li>
+        </ul>
+    </div></section>
+
+
+    <section id="imagine" class="slide shout"><div>
+        <h2>想像一個情境</h2>
+    </div></section>
+
+
+    <section id="before-deadline" class="slide"><div>
+        <h2>報告/專題/咪挺前夕…</h2>
+        <center><div class="ref-img">
+            <img src="pics/deadline.jpg" alt="">
+            <p class="src-link">
+                pic src:
+                <a target="_blank"
+                   href="http://doingsomethingmoreforgod.blogspot.tw/2010/11/deadline-for-applications-fast_20.html">
+                    doingsomethingmoreforgod.blogspot.tw
+                </a>
+            </p>
+        </div></center>
+    </div></section>
+
+
+    <section id="deadline-eff" class="slide"><div>
+        <center><div class="ref-img">
+            <img src="pics/deadline_eff.jpg" alt="">
+            <p class="src-link">
+                pic src:
+                <a target="_blank"
+                    href="http://www.hksilicon.com/kb/articles/112626/deadlineFinish">
+                    hksilicon.com
+                </a>
+            </p>
+        </div></center>
+    </div></section>
+
+
+    <section id="bad-plot" class="slide twocol"><div>
+        <h2>很容易生出這樣的圖表…</h2>
+        <div class="left">
+            <p class="inline">excel</p>
+            <img src="pics/excel_default.png" width="100%" alt="">
+        </div><div class="right">
+            <p class="inline">matlab</p>
+            <img src="pics/matlab_default.gif" width="100%" alt="">
+        </div>
+    </div><style>
+        p.inline {
+            text-align: center;
+        }
+    </style></section>
+
+
+    <section id="more-google-ex" class="slide twocol"><div>
+        <h2>預設的風格……<span class="next">很醜</span></h2>
+        <div class="left">
+            <img src="pics/google_excel.png" width="100%" alt="">
+        </div><div class="right">
+            <img src="pics/google_matlab.png" width="100%" alt="">
+        </div>
+    </div></section>
+
+
+    <section id="google-ggplot2" class="slide"><div>
+            <center><img width="90%" src="pics/google_ggplot2.png" alt=""></center>
+    </div></section>
+
+
+    <section id="common-problems" class="slide"><div>
+        <h2>自己的經驗，常碰到的問題</h2>
+        <ul>
+            <li class="next">預設風格不好看</li>
+            <li class="next">但很多東西很難調整</li>
+            <li class="next">不知道該怎麼畫</li>
+            <li class="next">最麻煩的是根本不能畫</li>
+        </ul>
+        <h2 class="next">這些問題，大多在 R 裡能解決</h2>
+    </div></section>
+
+
+    <section id="solutions" class="slide"><div>
+        <h2>在選擇什麼工具作圖前，先想清楚</h2>
+        <ul>
+            <li class="next">這張圖多重要？</li>
+            <li class="next">可以花多少時間？值得花這麼多時間嗎？</li>
+            <li class="next">有必要這要畫嗎？</li>
+            <li class="next">這樣畫想要呈現什麼？</li>
+        </ul>
+        <p class="next">在 R 裡面，大概有 <br />
+            1. 內建指令 2. 底層的畫圖指令 3. ggplot2 類比較抽象的函式 <br />
+            幾種方式來畫圖。
+        </p>
+    </div></section>
+
+
+    <section id="sol-basic-plot" class="slide twocol"><div>
+        <h2>使用內建指令</h2>
+        <div class="left">
+            <p class="inline">優點</p>
+            <ul>
+                <li>很簡單又快</li>
+                <li>適合看 data 長什麼樣</li>
+                <li>指令齊全，2D 圖都做得到</li>
+                <li>要調一些版面也不難 <br />
+                    axis ticks, legend, margin <br />
+                    都可以改
+                </li>
+            </ul>
+        </div>
+        <div class="right next">
+            <p class="inline">缺點</p>
+            <ul>
+                <li><code>par(%$#!...)</code></li>
+                <li>會查到一堆神祕的參數名稱</li>
+                <li>預設風格簡單，想改得比較美觀要花很多力氣</li>
+            </ul>
+        </div>
+    </div></section>
+
+
+    <section id="sol-lowapi-plot" class="slide twocol"><div>
+        <h2>使用底層的套件</h2>
+        <div class="left">
+            <p class="inline">優點</p>
+            <ul>
+                <li>lattice, grid, ... 等套件</li>
+                <li>所有圖表都畫得出來</li>
+                <li>可以仔細設計呈現的方式</li>
+                <li>很適合用來做 Infographics</li>
+                <li>很多期刊上圖（尤其是多圖併列）都可以用這個畫</li>
+            </ul>
+        </div>
+        <div class="right next">
+            <p class="inline">缺點</p>
+            <ul>
+                <li>一張圖畫兩、三天都不嫌長</li>
+                <li>對 R、R 繪圖的概念要很清楚</li>
+                <li>「魔鬼都藏在細節裡」</li>
+                <li>非常不適合趕死線</li>
+                <li>非常不適合趕死線</li>
+                <li>非常不適合趕死線</li>
+            </ul>
+        </div>
+    </div></section>
+
+
+    <section id="sol-ggplot2" class="slide twocol"><div>
+        <h2>使用 <code>ggplot2</code></h2>
+        <div class="left">
+            <p class="inline">優點</p>
+            <ul>
+                <li>大多數的圖表都畫得出來</li>
+                <li>在使用上遵照一定邏輯<br />
+                    例如畫圖都從 <code>geom_xxx(...)</code> 開始</li>
+                <li>短時間內能產出品質更高的圖表</li>
+                <li>常用的設定存起來，會越用越順</li>
+            </ul>
+        </div>
+        <div class="right next">
+            <p class="inline">缺點</p>
+            <ul>
+                <li>一開始還是要學怎麼用</li>
+                <li>調參數還是要查，但比較好懂</li>
+                <li>當你要開始脫離它設計的框架，例：把幾張圖排一起共用座標</li>
+                <li>會慢慢越來越底層</li>
+                <li>剛開始一定很卡</li>
+            </ul>
+        </div>
+    </div></section>
+
+
+    <section id="outline" class="slide twocol-ll"><div>
+        <h2>本日大綱</h2>
+        <div class="left">
+        <ul>
+            <li>資料前處理</li>
+            <li>基本畫圖指令</li>
+            <li>ggplot2 原則</li>
+            <li>練習</li>
+        </ul>
+        </div><div class="right">
+            <img src="pics/chibird/happy.png" alt="">
+        </div>
+    </div></section>
+
+
+    <section id="data-prepocess" class="slide"><div>
+        <h2>資料前處理</h2>
+        <ul>
+            <li>實務上花最多時間的 (80/20)</li>
+            <li>讀入前儘量轉換成「純文字」、「CSV」檔</li>
+            <li>太複雜的處理可以改用自己熟悉的工具 <ul>
+                <li>推薦用 Python</li>
+                <li>原生是 Excel 的話可以先用 Excel 把表格排整齊</li>
+            </ul></li>
+            <li>使用 <code>data.frame</code> 儲存資料</li>
+            <li>轉換成 <b>1 row = 1 observation</b></li>
+            <li>填補、去除 <code>NA</code></li>
+        </ul>
+    </div></section>
+
+
+    <section id="play-data-process" class="slide twocol"><div>
+        <div class="left">
+        <pre class="language-r small">
+<code># 放在 Rcode/play_data_process
+# 純文字，用 R 未必好操作
+# 記得使用 UTF-8 不要 big5/cp950
+df.ntu_sexratio <- read.table(
+  'NTU_B02new_sexratio.raw.txt',
+  comment.char="#",
+  header=TRUE,
+  strip.white=TRUE,
+  stringsAsFactors=FALSE
+)
+# 把總人數中的 "人" 去掉
+# 並且由字串轉成數字處理
+df.ntu_sexratio[[2]] <- as.integer(
+  strsplit(df.ntu_sexratio[[2]], "人")
+)
+</code></pre>
+        </div><div class="right">
+            <img src="r-fig/data_process_raw.png" width="100%" alt="">
+        </div>
+    </div></section>
+
+
+    <section id="play-data-process-py" class="slide twocol-ll"><div>
+        <div class="left">
+        <pre class="language-python small">
+<code># 使用 Python3 處理
+import pandas as pd
+RAW_PATH = 'NTU_B02new_sexratio.raw.txt'
+CSV_PATH = 'NTU_B02new_sexratio.csv'
+df = pd.read_table(
+    RAW_PATH,    # 檔案路徑
+    sep='[ ]*',  # 分隔符號
+    skiprows=11  # 忽略前 11 行不讀
+)
+df = df.dropna() # df.head() 可以看到第 0 列是 NaN (NA)
+# 去「人」
+df.ix[:, 1] = df.icol(1).apply(lambda x: x[:-1])
+df.to_csv(CSV_PATH, index=False)  # 存檔
+df2 = pd.read_csv(CSV_PATH)  # 測試，再讀回來
+</code></pre>
+        </div><div class="right">
+        <img src="r-fig/data_process_raw.png" width="100%" alt="">
+        <p class="inline next">光這檔案就夠麻煩了 <br /> 以轉成 CSV 為目標</p>
+        </div>
+    </div></section>
+
+
+        <section id="play-data-process-csv" class="slide twocol-ll"><div>
+        <div class="left">
+        <p class="tighter">在 R 內讀 CSV 非常方便。<br />
+        也試一下由 excel 另存 CSV 吧。 <br />
+        data.frame 操作詳見 <a href="http://adv-r.had.co.nz/Subsetting.html" target="_blank">
+                Subsetting, Advanced R programming by Hadley Wickham
+        </a></p>
+        <pre class="language-r small tighter">
+<code>df.ntu <- read.csv('NTU_B02new_sexratio.csv')
+df.ntu[, c("女", "男")]
+df.ntu[df.ntu$女 > 30, ]
+df.ntu[df.ntu$女 > 30 &amp; df.ntu$男 < 20, ]
+summary(df.ntu)
+ncol(df.ntu)
+nrow(df.ntu)</code></pre>
+        </div><div class="right">
+        <img src="r-fig/data_process_csv.png" width="100%" alt="">
+        </div>
+    </div></section>
+
+
+    <section id="basic-plot-head" class="slide"><div>
+        <h2>使用 ggplot2 基本畫圖指令</h2>
+        <ul>
+            <li>比較完整的介紹，見舊的投影片。</li>
+            <li>今天會挑部份來介紹 <br/>
+                <code>ggplot(data=..., aes(x=..., y=...)) + geom_xxx(...)</code> <br/>
+                這樣的形式為主。擴充度高，最常用。<ul>
+                <li><code>ggplot</code> 描述 data 從哪來</li>
+                <li><code>aes</code> 描述圖上的元素跟 data 之類的對應關係</li>
+                <li><code>geom_xxx</code> 描述要畫圖的類型及相關調整的參數</li>
+            </ul></li>
+        </ul>
+    </div></section>
+
+
+    <section id="basic-scatter" class="slide twocol"><div>
+        <h2 class="tighter">Scatter Plot</h2>
+        <pre class="language-r tighter">
+<code>plot(mtcars$wt, mtcars$mpg)
+ggplot(mtcars, aes(x=wt, y=mpg)) + geom_point()</code>
+        </pre>
+        <div class="left">
+            <img src="r-fig/basic_scatter_bt.png" width="90%" alt="">
+        </div><div class="right">
+            <img src="r-fig/basic_scatter_gg.png" width="90%" alt="">
+        </div>
+    </div></section>
+
+
+    <section id="basic-line" class="slide twocol"><div>
+        <h2 class="tighter">Line Plot</h2>
+        <pre class="language-r tighter">
+<code>ggplot(pressure, aes(x=temperature, y=pressure)) +
+  geom_line() + geom_point()</code>
+        </pre>
+        <div class="left">
+            <img src="r-fig/basic_line_point.png" width="90%" alt="">
+        </div><div class="right">
+            <img src="r-fig/basic_line_line.png" width="90%" alt="">
+        </div>
+    </div></section>
+
+
+    <section id="basic-bar" class="slide twocol"><div>
+        <h2 class="tighter">Bar Plot</h2>
+        <pre class="language-r tighter">
+<code>ggplot(BOD, aes(x=factor(Time), y=demand)) +
+  geom_bar(stat="identity")</code>
+        </pre>
+        <div class="left">
+            <img src="r-fig/basic_bar_orig.png" width="90%" alt="">
+        </div><div class="right">
+            <img src="r-fig/basic_bar_factor.png" width="90%" alt="">
+        </div>
+    </div></section>
+
+
+    <section id="basic-bar-count" class="slide twocol"><div>
+        <h2 class="tighter">Bar Plot by Counting</h2>
+        <pre class="language-r tighter small">
+<code>g <- ggplot(mtcars, aes(x=factor(cyl)))  # 先存起來
+g + geom_bar(stat="bin")  # 可以一步一步接
+g + geom_bar(stat="bin") + theme_bw(16)  # 改主題</code>
+        </pre>
+        <div class="left">
+            <img src="r-fig/basic_bar_count.png" width="90%" alt="">
+        </div><div class="right">
+            <img src="r-fig/basic_bar_count_theme.png" width="90%" alt="">
+        </div>
+    </div></section>
+
+
+    <section id="aes-scatter" class="slide twocol"><div>
+        <h2 class="tighter">Scatter Plot</h2>
+        <pre class="language-r tighter small">
+<code>ggplot(mtcars, aes(x=wt, y=mpg)) + geom_point(color="blue", size=5, alpha=0.5)
+ggplot(mtcars, aes(x=wt, y=mpg, color=gear)) + geom_point()</code>
+        </pre>
+        <div class="left">
+            <img src="r-fig/aes_scatter_param.png" width="90%" alt="">
+        </div><div class="right">
+            <img src="r-fig/aes_scatter_color.png" width="90%" alt="">
+        </div>
+    </div></section>
+
+
+    <section id="aes-scatter-scale" class="slide twocol"><div>
+        <div class="left">
+            <p class="tighter">如果要更改一系列設的值，用 <code>scale_xxx(...)</code></p>
+             <pre class="language-r tighter small">
+<code>g <- ggplot(
+  mtcars,
+  aes(x=wt, y=mpg, color=gear)
+)
+# 更改指定的顏色，目前是連續的
+g + geom_point(size=5) +
+  scale_color_continuous(
+    low="yellow", high="red"
+  ) + theme_bw(16) +
+  theme(legend.position="top")</code>
+            </pre>
+        </div><div class="right">
+            <img src="r-fig/aes_scatter_scale.png" width="90%" alt="">
+        </div>
+    </div></section>
+
+
+    <section id="aes-scatter-factor" class="slide twocol"><div>
+        <div class="left">
+            <p class="tighter">今天 <code>gear</code> 其實只有幾個值</p>
+             <pre class="language-r tighter small">
+<code>g <- ggplot(
+  mtcars,
+  aes(x=wt, y=mpg, color=factor(gear))
+) + geom_point(size=5) + theme_bw(16) +
+  theme(legend.position="top")
+g  # 印預設結果
+# 手動改顏色
+g + scale_color_manual(
+  values=c("red", "yellow", "purple")
+)
+# 系統內建色組
+g + scale_color_brewer(palette="Set3")
+</code>
+            </pre>
+        </div><div class="right">
+            <img src="r-fig/ase_scatter_factor.png" width="90%" alt="">
+        </div>
+    </div></section>
+
+
+    <section id="aes-scatter-combined" class="slide twocol"><div>
+        <div class="left">
+            <p class="tighter">可以一次更改很多東西</p>
+             <pre class="language-r tighter small">
+<code>g <- ggplot(
+  mtcars,
+  aes(x=wt, y=mpg,
+      color=factor(gear),
+      size=factor(gear)
+)) + theme_bw(16) +
+  theme(legend.position="top")
+
+g + geom_point(alpha=0.7) +
+  scale_size_discrete(range=c(4, 10))
+</code>
+            </pre>
+        </div><div class="right">
+            <img src="r-fig/aes_scatter_combined.png" width="90%" alt="">
+        </div>
+    </div></section>
+
+
+    <section id="aes-bar-combined" class="slide twocol"><div>
+        <div class="left">
+            <p class="tighter">其他類型的圖都是同樣規則</p>
+            <pre class="language-r tighter small">
+<code>g <- ggplot(mtcars, aes(
+  x=factor(cyl),
+  fill=factor(cyl)
+))
+
+g + geom_bar(stat="bin") +
+  scale_fill_brewer(palette="Set2") +
+  theme_classic()
+
+# 試著把 fill 改成 color
+</code>
+            </pre>
+        </div><div class="right">
+            <img src="r-fig/aes_bar_combined.png" width="90%" alt="">
+        </div>
+    </div></section>
+
+
+    <section id="further-reading" class="slide twocol"><div>
+        <h2>延伸閱讀</h2>
+        <div class="left">
+            <p class="inline">R 基礎語法</p>
+            <center><img src="pics/R_cookbook.jpg" width="70%" alt=""></center>
+        </div><div class="right">
+            <p class="inline">ggplot2 完整介紹</p>
+            <center><img src="pics/R_graphics_cookbook.jpg" width="70%" alt=""></center>
+        </div>
+    </div></section>
+
+
+    <section id="wide-to-long" class="slide"><div>
+        <h2>回到一開始的例子</h2>
+        <ul>
+            <li>今天希望畫的是每科系的男女人數的 bar plot</li>
+            <li>希望以科系分群(Grouped)</li>
+            <li>先只取部份的科系</li>
+            <li>原來的格式 1 row 有「男」、「女」兩個資料，故要做轉換</li>
+            <li>稱這種轉換為 <b>Wide-to-Long</b></li>
+        </ul>
+    </div></section>
+
+
+    <section id="wide-to-long-demo" class="slide twocol"><div>
+        <p class="inline">使用 <code>library(reshape2)</code></p>
+        <div class="left">
+            <p class="inline"><code>melt()</code> ==></p>
+            <table>
+                <tr>
+                    <td>科系名 (disp)</td>
+                    <td>男 (male)</td>
+                    <td>女 (female)</td>
+                </tr>
+                <tr>
+                    <td>A</td>
+                    <td>5</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>B</td>
+                    <td>6</td>
+                    <td>12</td>
+                </tr>
+                <tr>
+                    <td>C</td>
+                    <td>9</td>
+                    <td>18</td>
+                </tr>
+            </table>
+        </div><div class="right">
+            <p class="inline"><== <code>dcast()</code></p>
+            <table>
+                <tr>
+                    <td>科系名 (disp)</td>
+                    <td>性別 (sex)</td>
+                    <td>人數 (number)</td>
+                </tr>
+                <tr>
+                    <td>A</td>
+                    <td>male</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>A</td>
+                    <td>female</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>B</td>
+                    <td>male</td>
+                    <td>6</td>
+                </tr>
+                <tr>
+                    <td>B</td>
+                    <td>female</td>
+                    <td>12</td>
+                </tr>
+                <tr>
+                    <td>C</td>
+                    <td>male</td>
+                    <td>9</td>
+                </tr>
+                <tr>
+                    <td>C</td>
+                    <td>female</td>
+                    <td>18</td>
+                </tr>
+            </table>
+        </div>
+    </div><style>
+        #wide-to-long-demo table {
+            width: 90%;
+            margin: 0 0 20px;
+        }
+    </style></section>
+
+
+    <section id="wide-to-long-code" class="slide"><div>
+        <pre class="language-r small">
+<code>library(reshape2)
+df.ntu <- read.csv('NTU_B02new_sexratio.csv')
+colnames(df.ntu) <- c("disp", "total", "male", "female", "ratio")
+
+# 只取一部份的資料
+df.part <- df.ntu[c(1, 10, 20, 30, 40, 50, 56), ]
+df.part$ratio <- NULL
+df.part$total <- NULL
+
+# Wide-to-Long
+df.part <- melt(
+  df.part,             # data.frame
+  id.vars="disp",      # 每行固定出現的 (disp)
+  variable.name="sex", # 多欄合併後欄位名 (存 male/female)
+  value.name="number"  # 放值的地方
+)</code>
+        </pre>
+    </div></section>
+
+
+    <section id="stack-bar-plot" class="slide twocol"><div>
+        <div class="left"><pre class="language-r small">
+<code>g <- ggplot(df.part,
+  aes(x=disp, y=number, fill=sex)) +
+  theme(text=element_text(
+    family="Heiti TC Medium",
+    size=18))
+
+# Stack 男女疊在一起
+g + geom_bar(stat="identity")
+
+# Dodge 同科系男女靠比較近
+g + geom_bar(stat="identity",
+             position="dodge")</code>
+</pre></div>
+    <div class="right">
+        <img src="r-fig/stack_bar.png" width="90%" alt="">
+    </div></div>
+    </section>
+
+    <!-- End Slide -->
+    <section id='end' class='slide cover shout w'><div>
+        <h2>Thank You!</h2>
+        <img src="pics/end_cover.jpg" alt="">
+        <p class="src-link">
+            pic source:
+            <a href="http://www.r-bloggers.com/mapping-the-worlds-biggest-airlines/"
+               target="_blank">
+                http://www.r-bloggers.com/mapping-the-worlds-biggest-airlines/
+            </a>
+        </p>
+    </div>
+    <style>
+        #end a {
+            color: #DDD;
+        }
+        #end h2 {
+            position: absolute;
+            top: 10%;
+            color: #DDD;
+            font-size: 80px;
+        }
+        #end .src-link {
+            position: absolute;
+            font-size: 14px;
+            color: #DDD;
+            text-align: right;
+            top: 85%;
+            right: 10px;
+        }
+    </style></section>
+
+    <!-- END OF SLIDE CONTENT -->
+
+    <p class="badge"><a href="https://github.com/ccwang002/ggplot2-tutorial">Fork me on Github</a></p>
+    <div class="progress"><div></div></div>
+
+    <!-- Library -->
+    <script src="lib/highlight/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+    <script src="lib/shower/shower.min.js"></script>
+    <!-- Mathjax -->
+    <!-- During local development, use localhost mathjax for speed-->
+    <!--<script src="file:///Users/liang/.ipython/profile_default/static/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
+    <!-- online Mathjax CDN -->
+    <!--
+    <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    -->
+    <!-- Google Analytics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-42219381-4', 'ccwang002.github.io');
+        ga('send', 'pageview');
+    </script>
+</body>
+</html>
