@@ -1,7 +1,7 @@
 library(reshape2)
 library(ggplot2)
 
-df.ntu <- read.csv('NTU_B02new_sexratio.csv')
+df.ntu <- read.csv('play_data_process/NTU_B02new_sexratio.csv')
 colnames(df.ntu) <- c("disp", "total", "male", "female", "ratio")
 
 # 只取一部份的資料
@@ -36,7 +36,7 @@ g + geom_bar(stat="identity") + theme(legend.position="top")
 
 g + geom_bar(stat="identity", position="dodge") + scale_fill_brewer(palette="Set3")
 
-g + geom_bar(stat="identity", position="dodge") + scale_fill_brewer(palette="Set1")
+g + geom_bar(stat="identity", position="dodge") + scale_fill_brewer(palette="Set1")  + theme(legend.position="top")
 
 
 # Long-to-Wide

@@ -176,8 +176,6 @@
         <ul>
             <li class="next">畫圖</li>
             <li class="next">…還是畫圖</li>
-            <li class="next">早上來上課會蠻想睡的……</li>
-            <li class="next">不知道大家常不常做圖表？</li>
         </ul>
     </div></section>
 
@@ -357,7 +355,7 @@
             <li>資料前處理</li>
             <li>基本畫圖指令</li>
             <li>ggplot2 原則</li>
-            <li>練習</li>
+            <li>Use Case Study</li>
         </ul>
         </div><div class="right">
             <img src="pics/chibird/happy.png" alt="">
@@ -433,8 +431,8 @@ df2 = pd.read_csv(CSV_PATH)  # 測試，再讀回來
 
         <section id="play-data-process-csv" class="slide twocol-ll"><div>
         <div class="left">
-        <p class="tighter">在 R 內讀 CSV 非常方便。<br />
-        也試一下由 excel 另存 CSV 吧。 <br />
+        <p class="tighter">在 R 內讀 CSV 非常方便<br />
+        原生檔則可以用 excel 另存 CSV <br />
         data.frame 操作詳見 <a href="http://adv-r.had.co.nz/Subsetting.html" target="_blank">
                 Subsetting, Advanced R programming by Hadley Wickham
         </a></p>
@@ -540,7 +538,7 @@ ggplot(mtcars, aes(x=wt, y=mpg, color=gear)) + geom_point()</code>
 
     <section id="aes-scatter-scale" class="slide twocol"><div>
         <div class="left">
-            <p class="tighter">如果要更改一系列設的值，用 <code>scale_xxx(...)</code></p>
+            <p class="tighter">更改參數實際對應的值，用 <code>scale_xxx(...)</code></p>
              <pre class="language-r tighter small">
 <code>g <- ggplot(
   mtcars,
@@ -561,7 +559,7 @@ g + geom_point(size=5) +
 
     <section id="aes-scatter-factor" class="slide twocol"><div>
         <div class="left">
-            <p class="tighter">今天 <code>gear</code> 其實只有幾個值</p>
+            <p class="tighter">gear 其實只有幾個值 (3, 4, 5)</p>
              <pre class="language-r tighter small">
 <code>g <- ggplot(
   mtcars,
@@ -585,7 +583,7 @@ g + scale_color_brewer(palette="Set3")
 
     <section id="aes-scatter-combined" class="slide twocol"><div>
         <div class="left">
-            <p class="tighter">可以一次更改很多東西</p>
+            <p class="tighter"><code>aes(...)</code> 一資料欄位可以同時指定多個參數</p>
              <pre class="language-r tighter small">
 <code>g <- ggplot(
   mtcars,
@@ -640,9 +638,9 @@ g + geom_bar(stat="bin") +
 
 
     <section id="wide-to-long-demo" class="slide twocol"><div>
-        <p class="inline">使用 <code>library(reshape2)</code></p>
+        <p class="inline"><code>library(reshape2)</code></p>
         <div class="left">
-            <p class="inline"><code>melt()</code> ==></p>
+            <p class="inline"><code>melt()</code> → </p>
             <table>
                 <tr>
                     <td>科系名 (disp)</td>
@@ -666,7 +664,7 @@ g + geom_bar(stat="bin") +
                 </tr>
             </table>
         </div><div class="right">
-            <p class="inline"><== <code>dcast()</code></p>
+            <p class="inline">← <code>dcast()</code></p>
             <table>
                 <tr>
                     <td>科系名 (disp)</td>
@@ -748,10 +746,13 @@ g + geom_bar(stat="identity")
 
 # Dodge 同科系男女靠比較近
 g + geom_bar(stat="identity",
-             position="dodge")</code>
+             position="dodge") +
+  scale_fill_brewer(palette="Set1") +
+  theme(legend.position="top")</code>
 </pre></div>
     <div class="right">
-        <img src="r-fig/stack_bar.png" width="90%" alt="">
+        <img src="r-fig/stack_bar.png" width="95%" alt="">
+        <img src="r-fig/dodge_bar.png" width="95%" alt="">
     </div></div>
     </section>
 
@@ -773,8 +774,119 @@ g + geom_bar(stat="identity",
         <img src="pics/googleVis_RStudio.png" width="100%" alt="">
     </div></section>
 
+
+    <section id="play-air-intro" class="slide"><div>
+        <h2>Ex. 北部空氣汙染監測</h2>
+        <ul>
+            <li>資料來源： <a href="http://taqm.epa.gov.tw/taqm/zh-tw/default.aspx" target="blank">行政院環保署空氣品質監測網</a></li>
+            <li>取北部 25 測站，一年平均每日不同小時觀測值</li>
+            <li>選擇觀測：PM10、NO2</li>
+            <li>使用 <code>ggmap()</code> 作底圖層</li>
+            <li><code>geom_point()</code> 將各測站的觀測值放在對應的測站位置</li>
+            <li>最多時間其實是在<b>資料前處理</b></li>
+            <li>原始資料 <code>中文.xls</code>，使用 Python3 + xlrd 前處理成 csv 檔</li>
+        </ul>
+    </div></section>
+
+
+    <section id="play-air-preprocess" class="slide"><div>
+        <h2 class="tighter">資料前處理，使用 IPython Notebook</h2>
+        <center><img src="pics/ipy_data_process.png" width="90%" alt=""></center>
+    </div></section>
+
+
+    <section id="play-air-map" class="slide twocol-ll"><div>
+        <div class="left"><pre class="language-r small">
+<code>library(plyr)
+library(ggmap)
+df.air <- read.csv("play_air_map/air_nothern_2012.csv", as.is=TRUE)
+df.loc <- data.frame(loc=unique(df.air$loc), stringsAsFactors=FALSE)
+
+# retreive GEO location (lon, lat)
+locator <- function(loc) {
+  geo_loc <- geocode(location=loc$loc)
+  df_temp <- data.frame(loc=loc, lon=geo_loc$lon, lat=geo_loc$lat)
+  return(df_temp)
+}
+df.loc <- ddply(df.loc, .(loc), locator)
+# combined with the air data
+df.air_loc <- merge(df.air, df.loc, by="loc", all.y=TRUE)
+df.air_loc$pollutant <- factor(df.air_loc$pollutant)</code></pre></div>
+        <div class="right"></div>
+    </div></section>
+
+
+    <section id="play-air-map-result" class="slide twocol"><div>
+        <div class="left"><pre class="language-r small">
+<code>g <- ggmap(
+  get_googlemap(
+    center=c(121.49, 25.04), # Long/lat of centre
+    zoom=10, maptype='satellite',
+    scale=2,
+  ), extent='device', darken = 0
+)
+
+# given a data filtered by pollutant and hourtime
+g + geom_point(
+  data=df.air[df.air$pollutant == "PM10", ],
+  aes(x=lon, y=lat, size=value, alpha=value),
+  color="yellow") +
+  scale_size_continuous(range=c(5, 30)) +
+  scale_alpha_continuous(range=c(0.2, 1))</code>
+  </pre></div>
+        <div class="right" style="text-align: right;">
+            <img src="r-fig/ggmap_air_no2.png" width="75%" alt="">
+            <img src="r-fig/ggmap_air_pm10.png" width="75%" alt="">
+        </div>
+    </div></section>
+
+
+    <section id="play-earthquake-data" class="slide"><div>
+        <h2>Ex. 地震頻率空間分布</h2>
+        <ul>
+            <li>分析參考<a href="http://xccds1977.blogspot.tw/2012/06/ggmap.html">這篇博客</a></li>
+            <li>資料來源：<a href="http://www.cwb.gov.tw/V7/earthquake/rtd_eq.htm">中央氣象局</a></li>
+            <li>一樣資料處理很麻煩</li>
+            <li>加上 <code>stat_density2d</code> 估計 Kernel density</li>
+            <li>改做成動態顯示，規模越高，地震分布的變化</li>
+        </ul>
+    </div></section>
+
+
+    <section id="play-earthquake-code" class="slide"><div>
+        <pre class="language-r small">
+<code>show_over_scale <- function(scale) {
+  df_temp <- df.earthquake[df.earthquake$scale > scale, ]
+  g_layered <- g + geom_point(data=df_temp, aes(x=lon, y=lat), color="red") +
+    stat_density2d(
+      aes(x = lon, y = lat, fill = ..level.., alpha = ..level..),
+      bins = 12, geom = "polygon",
+      data = df_temp
+    ) + scale_alpha_continuous(range=c(0.3, 1), guide=FALSE) +
+    scale_fill_continuous(low="yellow", high="red", guide=FALSE)
+  ggsave(filename=paste0(scale*10, ".png"), scale=2, width=2, height=2)
+}
+
+for(s in seq(from=2, to=5, by=0.5))
+  show_over_scale(s)</code>
+        </pre>
+    </div></section>
+
+
+    <section id="play-earthquake-result" class="slide twocol"><div>
+        <div class="left">
+            <p class="inline">靜態</p>
+            <center><img src="r-fig/ggmap_earthquake.png" width="95%" alt=""></center>
+        </div>
+        <div class="left">
+            <p class="inline">動態</p>
+            <center><img src="r-fig/ggmap_earthquake.gif" width="95%" alt=""></center>
+        </div>
+    </div></section>
+
+
     <section id="further-reading" class="slide twocol"><div>
-        <h2>延伸閱讀</h2>
+        <h2 class="tighter">延伸閱讀</h2>
         <div class="left">
             <p class="inline">R 基礎語法</p>
             <center><img src="pics/R_cookbook.jpg" width="70%" alt=""></center>

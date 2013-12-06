@@ -2,7 +2,7 @@ library(plyr)
 library(ggmap)
 # adapted from http://xccds1977.blogspot.tw/2012/06/ggmap.html
 # raw data from http://www.cwb.gov.tw/V7/earthquake/rtd_eq.htm
-df.earthquake <- read.csv("play_air_map/earthquake_month_parsed.csv", as.is=TRUE)
+df.earthquake <- read.csv("play_earthquake_map/earthquake_month_parsed.csv", as.is=TRUE)
 
 g <- ggmap(
   get_googlemap(
