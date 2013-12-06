@@ -106,28 +106,38 @@
 
     <!-- Cover slide -->
     <section id="cover" class="slide cover w"><div>
+        <p class="url">Online slide:
+            <a href="http://ccwang002.github.io/2013-RConf-ggplot2-intro/" target="_blank">
+                http://ccwang002.github.io/2013-RConf-ggplot2-intro/
+            </a>
+        </p>
         <h3>
-            Taiwan R Conference, 2013-12-06
+            Taiwan R Conference, 2013-12-06<br />
         </h3>
         <h2>R Visualization Using ggplot2</h2>
         <p><a href="http://about.me/lbwang" target="_blank">Liang Bo Wang</a> (亮亮)</br>
-        <a href="http://ccwang002.github.io/2013-RConf-ggplot2-intro/" target="_blank">線上投影片</a>, under CC 4.0 BY International License</p>
+        Under CC 4.0 BY International License</p>
         <img src="pics/cover.jpg" alt="">
     </div>
     <style>
         #cover h2 {
-            margin: 90px 0 0px;
+            margin: 60px 0 0px;
             color: #FFF;
             text-align: center;
             font-size: 120px;
             opacity: 0.6;
         }
         #cover h3 {
-            margin: -90px 0 0 0;
+            margin: 0px;
             color: #FFF;
             text-align: center;
             font-size: 32px;
             opacity: 0.6;
+        }
+        #cover p.url {
+            margin-top: -80px;
+            font-size: 18px;
+            line-height: 24px;
         }
         #cover p {
             margin: 90px 0 0;
@@ -399,7 +409,7 @@ df.ntu_sexratio[[2]] <- as.integer(
 )
 </code></pre>
         </div><div class="right">
-            <img src="r-fig/data_process_raw.png" width="100%" alt="">
+            <img src="r-fig/data_process_raw.png" width="95%" alt="">
         </div>
     </div></section>
 
@@ -638,15 +648,14 @@ g + geom_bar(stat="bin") +
 
 
     <section id="wide-to-long-demo" class="slide twocol"><div>
-        <p class="inline"><code>library(reshape2)</code></p>
         <div class="left">
             <p class="inline"><code>melt()</code> → </p>
             <table>
-                <tr>
+                <thead><tr>
                     <td>科系名 (disp)</td>
                     <td>男 (male)</td>
                     <td>女 (female)</td>
-                </tr>
+                </tr></thead>
                 <tr>
                     <td>A</td>
                     <td>5</td>
@@ -663,14 +672,18 @@ g + geom_bar(stat="bin") +
                     <td>18</td>
                 </tr>
             </table>
+            <ul>
+                <li class="tighter">使用 <code>library(reshape2)</code></li>
+                <li class="tighter"><code>melt, dcast</code> 做 W/L, L/W 轉換</li>
+            </ul>
         </div><div class="right">
             <p class="inline">← <code>dcast()</code></p>
             <table>
-                <tr>
+                <thead><tr>
                     <td>科系名 (disp)</td>
                     <td>性別 (sex)</td>
                     <td>人數 (number)</td>
-                </tr>
+                </tr></thead>
                 <tr>
                     <td>A</td>
                     <td>male</td>
@@ -705,8 +718,7 @@ g + geom_bar(stat="bin") +
         </div>
     </div><style>
         #wide-to-long-demo table {
-            width: 90%;
-            margin: 0 0 20px;
+            max-width: 90%;
         }
     </style></section>
 
@@ -790,7 +802,7 @@ g + geom_bar(stat="identity",
     <section id="play-air-intro" class="slide"><div>
         <h2>Ex. 北部空氣汙染監測</h2>
         <ul>
-            <li>資料來源： <a href="http://taqm.epa.gov.tw/taqm/zh-tw/default.aspx" target="blank">行政院環保署空氣品質監測網</a></li>
+            <li>資料來源： <a href="http://taqm.epa.gov.tw/taqm/zh-tw/default.aspx" target="_blank">行政院環保署空氣品質監測網</a></li>
             <li>取北部 25 測站，一年平均每日不同小時觀測值</li>
             <li>選擇觀測：PM10、NO2</li>
             <li>使用 <code>ggmap()</code> 作底圖層</li>
